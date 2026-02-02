@@ -25,7 +25,12 @@ The objective of the game is to match all pairs of cards by flipping them two at
 
 ---
 
- 👤 Author
+🔗 Live Demo: https://memory-game-chetan.netlify.app
+
+---
+
+## 👤 Author --
  
- ## Chetan Sharma ##
+## Chetan Sharma ##
+
 
