@@ -4,7 +4,7 @@
 
 🔗 Live Demo: https://memory-game-chetan.netlify.app
 
-A simple and interactive **Memory Card Game** built using **HTML, CSS, and JavaScript (DOM Manipulation)**.  
+A simple and interactive **Memory Game** built using **HTML, CSS, and JavaScript (DOM Manipulation)**.  
 The objective of the game is to match all pairs of cards by flipping them two at a time.
 
 ---
@@ -32,6 +32,7 @@ The objective of the game is to match all pairs of cards by flipping them two at
 ## 👤 Author --
  
 ## Chetan Sharma ##
+
 
 
 
