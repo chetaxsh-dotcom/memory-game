@@ -17,28 +17,35 @@ body {
 
 header {
   width: 100%;
-  max-width: 500px;
+  max-width: 620px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+  font-size: 20px;
+  padding: 25px;
 }
 
 button {
-  padding: 8px 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
+  padding: 12px 28px;   
+  font-size: 19px;      
+  border-radius: 10px;
   background: #ff9800;
   color: #000;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: greenyellow;
 }
 
 .game-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 130px);
+  gap: 28px;
   width: 90%;
+  justify-content: center;
   max-width: 500px;
 }
 
@@ -46,7 +53,8 @@ button {
 .card {
   font-size: 2.5rem;
   background: #3a3a3a;
-  height: 100px;
+  height: 140px;
+  width: 145px;
   border-radius: 15px;
   display: flex;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
@@ -91,6 +99,18 @@ button {
   z-index: 10;
 }
 
+.win-popup button {
+  padding: 14px 32px;
+  font-size: 19px;
+  background:#9500ff;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.win-popup button:hover {
+  background: #66bb6a;
+}
+
 .win-popup h2 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -102,6 +122,7 @@ button {
 
 .celebrate {
   animation: pop 0.5s ease-in-out infinite alternate;
+  font-size: 40px;
 }
 
 @keyframes pop {
@@ -109,3 +130,50 @@ button {
   to { transform: scale(1.02); }
 }
 
+.card {
+  perspective: 1000px;
+  background: transparent;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* FLIP EFFECT */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  backface-visibility: hidden;
+}
+
+/* FRONT */
+.card-front {
+  background: #3a3a3a;
+  color: #ff4d6d;
+}
+
+/* BACK */
+.card-back {
+  background: #4caf50;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
